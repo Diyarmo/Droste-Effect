@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread("1.jpg")
+image = cv2.imread("clock.jpg")
 image = np.array(image)
 
 rows = np.linspace(-1, 1, num=image.shape[0])
@@ -9,7 +9,7 @@ cols = np.linspace(-1, 1, num=image.shape[1])
 xv, yv = np.meshgrid(cols, rows)
 
 zv = xv + 1j*yv
-r1 = 0.2
+r1 = 0.25
 r2 = 0.9
 zv = zv.flatten()
 zv = np.select([np.abs(zv) <= r2], [zv])
