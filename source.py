@@ -24,7 +24,7 @@ Xnew = np.clip(Xnew, 0, img.shape[1]-1)
 Ynew = np.clip(Ynew, 0, img.shape[0]-1)
 Xnew = np.floor(Xnew).astype(int)
 Ynew = np.floor(Ynew).astype(int)
-new_img = np.zeros([3*img.shape[0], img.shape[1], 3], dtype=np.uint8)
+new_img = np.zeros([img.shape[0], img.shape[1], 3], dtype=np.uint8)
 for i in range(rep*img.shape[0]):
     for j in range(img.shape[1]):
         new_img[Ynew[i][j], Xnew[i][j]] = img[i % img.shape[0]][j]
